@@ -25,7 +25,7 @@ On va avoir dans notre fichier "eoh" qqch du genre :
 
 >>>>>>>>>>"branchname" 
 Il faut supprimer tout ça pour obtenir le code que l'on veut. 
-Puis "git add ." -> "git commit" -> Ecran bizzard avec conflicts -> Shift -> ":wq" 
+Puis "git add ." -> "git commit" -> Ecran bizzard avec conflicts -> ":wq" 
 
 
 Fast-forward // recursive strategy -> juste des indications sans conséquences 
