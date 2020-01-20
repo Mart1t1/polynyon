@@ -31,3 +31,6 @@ Puis "git add ." -> "git commit" -> Ecran bizzard avec conflicts -> ":wq"
 Fast-forward // recursive strategy -> juste des indications sans conséquences 
 
 LES MESSAGES DE COMMIT SONT SUPER IMPORTANTS POUR LES FEEDBACK PTN !!! 
+
+git push --set-upstream origin "branchname" 
+git pull 
