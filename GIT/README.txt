@@ -33,4 +33,4 @@ Fast-forward // recursive strategy -> juste des indications sans conséquences
 LES MESSAGES DE COMMIT SONT SUPER IMPORTANTS POUR LES FEEDBACK PTN !!! 
 git push --set-upstream origin "branchname" 
 git pull 
-git push origin --delete hugo
+git push origin --delete "remotebranchname"
