@@ -34,3 +34,4 @@ LES MESSAGES DE COMMIT SONT SUPER IMPORTANTS POUR LES FEEDBACK PTN !!!
 git push --set-upstream origin "branchname" 
 git pull 
 git push origin --delete "remotebranchname"
+git checkout --track origin/"branchname" 
