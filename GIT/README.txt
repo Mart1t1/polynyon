@@ -7,7 +7,7 @@ A la place de faire "git branch" puis "git checkout" on peut faire directement :
 
 
 git add . 
-git add -m "..." 
+git commit -m "..." 
 
 
 
