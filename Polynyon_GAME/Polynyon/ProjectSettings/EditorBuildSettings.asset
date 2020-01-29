@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Ile/Polynon Scene.unity
+    guid: 1c481099a1637ee42a4af6946fc3d9a3
+  - enabled: 1
+    path: Assets/Scenes/MENUOK.unity
+    guid: 628acb323ad9ece4bb6085f681886f14
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 00b200523b0f5e84dbd16496dcd540bb
   m_configObjects: {}
