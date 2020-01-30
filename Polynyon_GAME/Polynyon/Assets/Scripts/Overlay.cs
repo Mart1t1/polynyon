@@ -11,13 +11,13 @@ public class Overlay : MonoBehaviour
 
     private void Start()
     {
-        
+        slider.value = PlayerPrefs.GetFloat("brigthness"); 
     }
 
     public void AdjustBrigthness(float x)
     {
         var tempColor = image.color;
-        tempColor.a = 1 - x; 
+        tempColor.a = 1 - x;
         image.color = tempColor;
         PlayerPrefs.SetFloat("brigthness", x);
         PlayerPrefs.Save();
