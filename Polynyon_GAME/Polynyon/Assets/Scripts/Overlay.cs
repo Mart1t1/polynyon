@@ -1,25 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Overlay : MonoBehaviour
+public class Overlay : MonoBehaviour 
 {
+   
     public Slider slider;
-    public Image image; 
 
     private void Start()
     {
-        slider.value = PlayerPrefs.GetFloat("brigthness"); 
+        slider.value = PlayerPrefs.GetFloat("brightness"); 
     }
 
-    public void AdjustBrigthness(float x)
+
+    public void Ptn(float tamerelatchoin)
     {
-        var tempColor = image.color;
-        tempColor.a = 1 - x;
-        image.color = tempColor;
-        PlayerPrefs.SetFloat("brigthness", x);
-        PlayerPrefs.Save();
+       PlayerPrefs.SetFloat("brightness", tamerelatchoin);
+       PlayerPrefs.Save();
+       
     }
 }
