@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class moves : MonoBehaviour
 {
-    public Rigidbody perso;
+    public CharacterController control;
 
-    public int déplacement;
+    public float speed = 8f;
+
+    public float gravity = -9.81f;
+    public Transform groundCheck;
+    public float groundis = 1.5f;
+    public LayerMask groundmask;
+    public bool isgrounded;
+    public Vector3 velocity;
+    public float jumphigh = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,23 +22,25 @@ public class moves : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (Input.GetKey("q"))
-        {
-            transform.Translate(new Vector3(-50f*Time.deltaTime, 0, 0));
-        }
-        if (Input.GetKey("d"))
-        {
-            transform.Translate(new Vector3(50f*Time.deltaTime, 0, 0));
-        }
-        if (Input.GetKey("z"))
-        {
-            transform.Translate(new Vector3(0, 0, 50f*Time.deltaTime));
-        }
-        if (Input.GetKey("s"))
-        {
-            transform.Translate(new Vector3(0, 0, -50f*Time.deltaTime));
-        }
+        isgrounded = Physics.CheckSphere(groundCheck.position, groundis, groundmask);
+        if (isgrounded && velocity.y < 0)
+            velocity.y = -2f;
+
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+        
+        Vector3 move = transform.right * x+ transform.forward * z;
+
+        control.Move(move*speed* Time.deltaTime);
+
+        velocity.y += gravity * Time.deltaTime;
+        control.Move(velocity * Time.deltaTime);
+        if (Input.GetButtonDown("Jump") && isgrounded)
+            velocity.y = Mathf.Sqrt(jumphigh * (-2f) * gravity);
+			
+		
+
     }
 }
