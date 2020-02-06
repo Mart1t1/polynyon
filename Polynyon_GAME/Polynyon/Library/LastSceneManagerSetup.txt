@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 sceneSetups:
 - path: Assets/Scenes/premiere_salle.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
+=======
+sceneSetups: []
+>>>>>>> d7573d95de2dcadebde8743f02105248fe86badd
