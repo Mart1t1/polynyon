@@ -44,7 +44,11 @@ The following packages were added:
   com.unity.modules.wind@1.0.0
   com.unity.modules.xr@1.0.0
 
+<<<<<<< HEAD
 === Thu Jan 30 16:43:26 2020
+=======
+=== Sat Feb  1 11:01:01 2020
+>>>>>>> newhomescreen
 
 Packages were changed.
 Update Mode: updateDependencies
